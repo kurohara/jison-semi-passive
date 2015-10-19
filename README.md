@@ -1,7 +1,7 @@
 # jison-semi-passive
 
 Make Jison parser to semi-passive.  
-The passive parser can be used to parse streaming input.
+The passive parser can be used to parse streaming input.  
 But because lexer of jison is using JavaScript's builtin regexp functions instead of own NFA/DFA, generated parser can't be 'passive'.  
 (might there be some solution, may be lexer's error correction or something can help this problem)  
 But applying some restrictions, they can be passive.  
