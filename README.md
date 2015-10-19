@@ -14,6 +14,8 @@ The restrictions are..
 2. Never define a token which includes EOF at the end.
 (Though I've never seen such a definitions)
 
+About original Jison, please refer to http://zaach.github.io/jison/.  
+
 ## Getting Started
 Install the module with: `npm install kurohara/jison-semi-passive`
 
