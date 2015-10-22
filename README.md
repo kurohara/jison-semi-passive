@@ -1,15 +1,20 @@
 # jison-semi-passive
 
 Make Jison parser to semi-passive.  
-Because lexer of jison using JavaScript System's builtin regexp functions instead of own NFA/DFA, generated parser can't be 'passive'.  
-But applying some restriction, they can be passive.  
-That is the reason why this is 'semi' passive.  
+The passive parser can be used to parse streaming input.  
+But because lexer of jison is using JavaScript's builtin regexp functions instead of own NFA/DFA, generated parser can't be 'passive'.  
+(might there be some solution, may be lexer's error correction or something can help this problem)  
+But applying some restrictions, they can be passive.  
+These restrictions, is the reason why this is 'semi' passive.  
 
 The restrictions are..
 
-1. Tokens can't be scanned passively, that means a token can't be divided into 2 or more parse calls.
+1. Tokens can't be scanned passively, that means a token can't be divided into 2 or more parse calls.  
+   You may be able to use Newline character to devide the input.
 2. Never define a token which includes EOF at the end.
 (Though I've never seen such a definitions)
+
+About original Jison, please refer to http://zaach.github.io/jison/.  
 
 ## Getting Started
 Install the module with: `npm install kurohara/jison-semi-passive`
