@@ -42,8 +42,8 @@ parser.parse("some input...");
 _(Coming soon)_
 
 ## Examples
-_(Coming soon)_
-
+[jsperf](https://github.com/kurohara/jsperf.git) is the first sample application using jison-semi-passive, please refer that.  
+(Though [jsperf](https://github.com/kurohara/jsperf.git) is under construction, barely working as sample of jison-semi-passive)  
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
