@@ -30,12 +30,12 @@ var syntax = fs.readFileSync('grammer.jison', 'utf8');
 var parser = new jisonmod.Parser(syntax);
 
 var state = {iseof: false};
-parser.parse("some input...");
-parser.parse("some input...");
-parser.parse("some input...");
+parser.parse("some input...", state);
+parser.parse("some input...", state);
+parser.parse("some input...", state);
 /* set iseof to true when the input has really ended. */
 state.iseof = true;
-parser.parse("some input...");
+parser.parse("some input...", state);
 ```
 
 ## Documentation
